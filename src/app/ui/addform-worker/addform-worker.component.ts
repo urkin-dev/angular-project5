@@ -19,10 +19,14 @@ export class AddformWorkerComponent implements OnInit {
   ngOnInit(): void {}
 
   onAddWorker() {
-    this.addWorker.emit({
-      name: this.name,
-      surname: this.surname,
-      type: this.type,
-    });
+    if (this.name === undefined || this.surname === undefined || this.name.trim() === '' || this.surname.trim() === '') {
+      alert("FIll the inputs");
+    } else {
+      this.addWorker.emit({
+        name: this.name,
+        surname: this.surname,
+        type: this.type,
+      });
+    }
   }
 }

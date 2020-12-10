@@ -1,4 +1,4 @@
-// TODO: Make form validation
+// TODO: Make normal form validation
 // TODO: Add store and make it reactive
 import { Component } from '@angular/core';
 import {
