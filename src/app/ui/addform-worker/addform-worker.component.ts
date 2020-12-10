@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { MyWorkerType, MyWorker } from 'src/app/shared/worker.model';
+import { MyWorkerType, MyWorker } from 'app/shared/worker.model';
 
 @Component({
   selector: 'app-addform-worker',

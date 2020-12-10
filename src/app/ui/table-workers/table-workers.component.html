@@ -16,12 +16,18 @@
             <th scope="row">{{ worker.id }}</th>
             <td>{{ worker.name }}</td>
             <td>{{ worker.surname }}</td>
-            <td>
+            <td class="d-flex">
               <button
-                class="btn btn-outline-danger btn-sm"
+                class="btn btn-outline-danger btn-sm mr-3"
                 (click)="onDeleteWorker(worker.id)"
               >
                 Удалить
+              </button>
+              <button
+                class="btn btn-outline-info btn-sm"
+                (click)="onEditWorker(worker)"
+              >
+                Редактировать
               </button>
             </td>
           </tr>
