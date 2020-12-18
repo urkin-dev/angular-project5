@@ -1,0 +1,18 @@
+{
+  "workers": [
+    {
+      "name": "Ivan",
+      "surname": "Urkin 4",
+      "type": 0,
+      "phone": "7 (909) 112-31-23",
+      "id": 3
+    },
+    {
+      "name": "Ivan",
+      "surname": "Urkin 3",
+      "type": 0,
+      "phone": "7 (990) 193-12-31",
+      "id": 4
+    }
+  ]
+}
