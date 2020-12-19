@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   myWorkerType = MyWorkerType;
   editformStatus = false;
   editWorkerId: number;
+  searchStr = '';
 
   constructor(
     private httpWorkersService: HttpWorkersService

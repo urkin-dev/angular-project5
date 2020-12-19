@@ -25,9 +25,11 @@ export class AddformWorkerComponent implements OnInit {
     this.addform = new FormGroup({
       firstName: new FormControl({ value: '', disabled: this.disabledForms }, [
         Validators.required,
+        Validators.pattern(/^\S*$/)
       ]),
       lastName: new FormControl({ value: '', disabled: this.disabledForms }, [
         Validators.required,
+        Validators.pattern(/^\S*$/)
       ]),
       phone: new FormControl({ value: '', disabled: this.disabledForms }, [
         Validators.required,

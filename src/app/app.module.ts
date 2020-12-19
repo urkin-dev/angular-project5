@@ -12,9 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditformComponent } from './ui/editform/editform.component';
 
 import { TextMaskModule } from 'angular2-text-mask';
+import { WorkersFilterPipe } from './shared/pipes/workers-filter.pipe';
 
 @NgModule({
-  declarations: [AppComponent, TableWorkersComponent, AddformWorkerComponent, EditformComponent],
+  declarations: [AppComponent, TableWorkersComponent, AddformWorkerComponent, EditformComponent, WorkersFilterPipe],
   imports: [
     BrowserModule,
     FormsModule,

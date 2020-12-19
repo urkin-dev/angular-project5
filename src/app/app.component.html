@@ -6,27 +6,33 @@
   </div>
   <app-editform [isVisible]='editformStatus' (saveWorker)="onEdditListener($event)"></app-editform>
   <app-addform-worker (addWorker)="onAddWorker($event)"></app-addform-worker>
+  <div class="row">
+    <div class="col-12">
+      <h6>Search</h6>
+      <input type="search" class="form-control mb-3" [(ngModel)]="searchStr" placeholder="Enter name and surname with space between">
+    </div>
+  </div>
   <app-table-workers
     [title]="'Программисты'"
-    [workers]="getByType(myWorkerType.programmer)"
+    [workers]="getByType(myWorkerType.programmer) | workersFilter: searchStr"
     (deleteWorker)="onDeleteById($event)"
     (editWorker) = "onEdditListener($event)"
   ></app-table-workers>
   <app-table-workers
     [title]="'Дизайнеры'"
-    [workers]="getByType(myWorkerType.designer)"
+    [workers]="getByType(myWorkerType.designer) | workersFilter: searchStr"
     (deleteWorker)="onDeleteById($event)"
     (editWorker) = "onEdditListener($event)"
   ></app-table-workers>
   <app-table-workers
     [title]="'Рекламщики'"
-    [workers]="getByType(myWorkerType.copywriter)"
+    [workers]="getByType(myWorkerType.copywriter) | workersFilter: searchStr"
     (deleteWorker)="onDeleteById($event)"
     (editWorker) = "onEdditListener($event)"
   ></app-table-workers>
   <app-table-workers
     [title]="'Менеджеры'"
-    [workers]="getByType(myWorkerType.manager)"
+    [workers]="getByType(myWorkerType.manager) | workersFilter: searchStr"
     (deleteWorker)="onDeleteById($event)"
     (editWorker) = "onEdditListener($event)"
   ></app-table-workers>
